@@ -1,22 +1,32 @@
-class pessoa{
-    constructor(nome, rg, idade){
+class pessoa {
+    constructor(nome, idade, rg) {
         this.nome = nome;
         this.idade = idade;
         this.rg = rg;
     }
-
-
-saudacao(){
-    console.log(`meu nome é ${this.nome} e eu tenho ${this.idade} anos, portador do rg: ${this.rg}`)
+    saudacao() {
+        console.log(
+            `Meu nome é ${this.nome} e eu tenho ${this.idade} anos, portador do RG: ${this.rg}`
+        );
+    }
 }
-}
 
+const cliente1 = new pessoa(
+    prompt("Digite seu nome:"),
+    parseInt(prompt("Digite sua idade:")),
+    prompt("Digite seu rg:")
+);
 
-const pessoa1 = new pessoa('maria', '123456789', 30 );
-const pessoa2 = new pessoa('joão', '123456789',23);
+console.log(cliente1.nome);
+console.log(cliente1.idade);
+console.log(cliente1.rg);
 
-console.log(pessoa2.nome)
-console.log(pessoa2.idade)
-console.log(pessoa2.rg)
+cliente1.saudacao();
 
-pessoa1.saudacao()
+const cliente2 = new pessoa(
+    prompt("Digite seu nome:"),
+    parseInt( prompt("Digite sua idade:")),
+    prompt("Digite seu rg:")
+);
+
+cliente2.saudacao();
